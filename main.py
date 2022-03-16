@@ -15,7 +15,7 @@ fonts = ("Cascadia Code", 24)
 #Random
 rps = ["Rock", "Paper", "Scissors"]
 computer = random.choice(rps)
-print(computer)
+#print(computer)
 
 #Labels and headings
 you = Label(w, text="You choose:", font=fonts, fg="white", bg="#282828")
@@ -26,19 +26,20 @@ win = Label(w, text="You win", fg="green", bg="#282828", font=fonts)
 lose = Label(w, text="You lose", fg="red", bg="#282828", font=fonts)
 draw = Label(w, text="Draw", fg="white", bg="#282828", font=fonts)
 
+result = Label(w, text="Result:", fg="white", bg="#282828", font=fonts)
 
 #Functions for winning and losing
 def rock():
     bot_choice.grid(row=1, column=2, padx=10, pady=10)
     if computer == rps[0]:
-        print("Draw")
+        #print("Draw")
         draw.grid(row=1, column=1, padx=10, pady=10)
 
     elif computer == rps[1]:
-        print("Computer wins")
+        #print("Computer wins")
         lose.grid(row=1, column=1, padx=10, pady=10)
     elif computer == rps[2]:
-        print("You win")
+        #print("You win")
         win.grid(row=1, column=1, padx=10, pady=10)
     rock['state'] = 'disabled'
     paper['state'] = 'disabled'
@@ -47,13 +48,13 @@ def rock():
 def paper():
     bot_choice.grid(row=1, column=2, padx=10, pady=10)
     if computer == rps[0]:
-        print("You win")
+        #print("You win")
         win.grid(row=1, column=1, padx=10, pady=10)
     elif computer == rps[1]:
-        print("Draw")
+        #print("Draw")
         draw.grid(row=1, column=1, padx=10, pady=10)
     elif computer == rps[2]:
-        print("Computer wins")
+        #print("Computer wins")
         lose.grid(row=1, column=1, padx=10, pady=10)
     rock['state'] = 'disabled'
     paper['state'] = 'disabled'
@@ -62,13 +63,13 @@ def paper():
 def scissors():
     bot_choice.grid(row=1, column=2, padx=10, pady=10)
     if computer == rps[0]:
-        print("Computer wins")
+        #print("Computer wins")
         lose.grid(row=1, column=1, padx=10, pady=10)
     elif computer == rps[1]:
-        print("You win")
+        #print("You win")
         win.grid(row=1, column=1, padx=10, pady=10)
     elif computer == rps[2]:
-        print("Draw")
+        #print("Draw")
         draw.grid(row=1, column=1, padx=10, pady=10)
     rock['state'] = 'disabled'
     scissors['state'] = 'disabled'
@@ -95,5 +96,6 @@ restart.grid(row=3, column=1, padx=10, pady=10)
 #label
 you.grid(row=0, column=0, padx=10, pady=10)
 bot.grid(row=0, column=2, padx=10, pady=10)
+result.grid(row=0, column=1, padx=10, pady=10)
 
 w.mainloop()
