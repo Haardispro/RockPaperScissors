@@ -6,7 +6,6 @@ import time
 
 w = Tk()
 w.title("Rock Paper Scissors")
-w.geometry("745x300")
 w.config(bg="#282828")
 w.resizable(width=False, height=False)
 
