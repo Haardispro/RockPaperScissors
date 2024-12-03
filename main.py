@@ -2,11 +2,11 @@
 from tkinter import *
 import random
 import os
-import time
 
 w = Tk()
 w.title("Rock Paper Scissors")
-w.config(bg="#282828")
+bg_color = "#282828"
+w.config(bg=bg_color)
 w.resizable(width=False, height=False)
 
 #Fonts
@@ -14,18 +14,18 @@ fonts = ("Cascadia Code", 24)
 #Random
 rps = ["Rock", "Paper", "Scissors"]
 computer = random.choice(rps)
-#print(computer)
+
 
 #Labels and headings
-you = Label(w, text="You choose:", font=fonts, fg="white", bg="#282828")
-bot = Label(w, text="Computer chooses:", font=fonts, fg="white", bg="#282828")
-bot_choice = Label(w, text="{}".format(computer), fg="white", bg="#282828", font=fonts)
+you = Label(w, text="You choose:", font=fonts, fg="white", bg=bg_color)
+bot = Label(w, text="Computer chooses:", font=fonts, fg="white", bg=bg_color)
+bot_choice = Label(w, text="{}".format(computer), fg="white", bg=bg_color, font=fonts)
 
-win = Label(w, text="You win", fg="green", bg="#282828", font=fonts)
-lose = Label(w, text="You lose", fg="red", bg="#282828", font=fonts)
-draw = Label(w, text="Draw", fg="white", bg="#282828", font=fonts)
+win = Label(w, text="You win", fg="green", bg=bg_color, font=fonts)
+lose = Label(w, text="You lose", fg="red", bg=bg_color, font=fonts)
+draw = Label(w, text="Draw", fg="white", bg=bg_color, font=fonts)
 
-result = Label(w, text="Result:", fg="white", bg="#282828", font=fonts)
+result = Label(w, text="Result:", fg="white", bg=bg_color, font=fonts)
 
 #Functions for winning and losing
 def rock():
